@@ -8,7 +8,7 @@ import Spotify from 'spotify-web-api-js';
 export class SpotifyService {
   spotifyApi: Spotify.SpotifyWebApiJs = null!;
   constructor() {
-    this.spotifyApi = new Spotify()
+    this.spotifyApi = new Spotify();
   }
 
   obterUrlLogin() {
@@ -28,8 +28,8 @@ export class SpotifyService {
     return params[0].split('=')[1];
   }
 
-  definirAcessToken(token: string){
-    this.spotifyApi.setAccessToken(token)
-    localStorage.setItem('token', token)
+  definirAcessToken(token: string) {
+    this.spotifyApi.setAccessToken(token);
+    localStorage.setItem('token', token);
   }
 }

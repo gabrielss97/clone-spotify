@@ -15,7 +15,9 @@ export class LoginComponent implements OnInit {
 
   verificarTokenUrlCallback(){
     const token = this.spotifyService.obterTokenUrlCallback()
-    console.log("🚀 ~ file: login.component.ts ~ line 18 ~ LoginComponent ~ verificarTokenUrlCallback ~ token => ", token)
+    if(!!token) {
+      this.spotifyService.definirAcessToken(token)
+    }
   }
 
   abrirPaginaLogin() {
